@@ -1,0 +1,180 @@
+.main {
+  display: flex;
+  position: relative;
+  min-height: 800px;
+}
+
+.woftw {
+  display: none;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 250px;
+  margin: 0 auto;
+  position: relative;
+}
+.name,
+.title {
+  font-weight: bold;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 3rem;
+  color: var(--dark-bg);
+}
+
+.title {
+  font-size: 1.5rem;
+  padding-top: 0.5rem;
+  color: var(--accent);
+}
+
+.links {
+  display: flex;
+}
+.links > a {
+  padding-right: 1rem;
+}
+.brand {
+  height: 2.5rem;
+}
+.name,
+.title,
+.links,
+.resume {
+  transform: translateY(20%);
+  margin: 0.2rem;
+}
+
+.resume {
+  padding: 0.8rem 1rem;
+  background: #282828;
+  color: white;
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-bottom: 0.8rem solid black;
+}
+
+.chevron {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%) rotate(90deg);
+  font-size: 4rem;
+}
+.fab {
+  position: fixed;
+  bottom: 2%;
+  z-index: 99;
+  right: -2%;
+  transform: translateX(-50%);
+  font-size: 5rem;
+  background-color: var(--accent);
+  height: 4rem;
+  width: 4rem;
+  border-radius: 999px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.fabImage {
+  filter: invert();
+  transform: translate(15%, -40%) scale(0.8);
+  /* transform: translate(20%, -40%) scale(0.8); */
+}
+
+.circle {
+  position: absolute;
+  height: 7rem;
+  width: 7rem;
+  top: 15%;
+  right: -30%;
+  background: transparent;
+  border: 1.2rem solid var(--accent);
+  border-radius: 99px;
+}
+
+.circle2 {
+  position: absolute;
+  height: 6rem;
+  width: 6rem;
+  top: 5%;
+  left: -30%;
+  background: #fde8cb;
+  border-radius: 99px;
+}
+.arc {
+  height: 3rem;
+  width: 6rem;
+  position: absolute;
+  border: 1.2rem solid var(--accent);
+
+  border-top-left-radius: 110px;
+  border-top-right-radius: 110px;
+  border: 1rem solid #f1844e;
+  border-bottom: 0;
+  bottom: 20%;
+  right: 80%;
+  transform: rotate(50deg);
+  transform-origin: center;
+}
+
+@media screen and (min-width: 900px) {
+  .main {
+    justify-content: space-evenly;
+    align-items: stretch;
+    min-height: unset;
+    background-color: var(--light-bg);
+  }
+  .hero {
+    width: 40%;
+  }
+
+  .name,
+  .title,
+  .links,
+  .resume {
+    transform: translateY(50%);
+    margin: 0.2rem;
+  }
+
+  .arc {
+    bottom: 20%;
+    right: 110%;
+  }
+  .chevron {
+    bottom: 0%;
+    font-size: 8rem;
+  }
+
+  .woftw {
+    display: flex;
+    width: 60%;
+    position: relative;
+  }
+  .woftw > img {
+    display: block;
+    width: 100%;
+    background-position-x: -80%;
+  }
+  .woftwtag {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotate(90deg) translateY(-50%);
+    font-size: 1.2rem;
+    top: 54%;
+    right: 52%;
+    color: var(--dark-bg);
+  }
+
+  .fab {
+    bottom: 3%;
+    right: -1%;
+  }
+}
