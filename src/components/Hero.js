@@ -8,7 +8,9 @@ import git from "../images/github.svg"
 import linked from "../images/linked.svg"
 import lightDark from "../images/lightdark.svg"
 import scroll from "../images/scroll.svg"
+
 let cx = classNames.bind(styles)
+
 const Hero = ({ light, setLight }) => {
   const toggleMode = () => setLight(!light)
   return (

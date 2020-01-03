@@ -55,7 +55,14 @@
 .resume {
   padding: 0.8rem 1rem;
   border-radius: 3px;
-  background: #282828;
+
+  background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(0, 0, 0, 0.15) 100%
+    ),
+    #282828;
+  background-blend-mode: multiply, multiply;
   color: white;
   font-family: inherit;
   font-size: 1.2rem;
@@ -131,8 +138,8 @@
   width: 6rem;
   top: 5%;
   left: -30%;
-  background: #fde8cb;
   border-radius: 99px;
+  background-color: #fde8cb;
 }
 .arc {
   height: 3rem;
