@@ -1,0 +1,172 @@
+.main {
+  background-color: var(--light-bg);
+  transition: 1s all;
+  padding-bottom: 6rem;
+}
+
+.main > h2 {
+  font-size: 3rem;
+  text-align: center;
+  padding: 0;
+  color: var(--dark-bg);
+}
+
+.lightText {
+  color: var(--light-bg) !important;
+}
+
+.darkBg {
+  background-color: var(--dark-bg);
+}
+
+.cards {
+  flex-grow: 1;
+  display: flex;
+  scroll-behavior: smooth;
+  overflow-x: scroll;
+  overflow-y: visible;
+  scroll-snap-type: x mandatory;
+  height: 100%;
+  margin-top: 5rem;
+}
+.cards::-webkit-scrollbar {
+  width: 0px; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+.card {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding-left: 3.5rem;
+  border-radius: 1px;
+  padding-right: 3.5em;
+  padding-top: 3rem;
+  scroll-snap-stop: always;
+  padding-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  max-height: 350px;
+  scroll-snap-align: center;
+  justify-content: space-between;
+  background: #282828;
+  position: relative;
+}
+.paddingcard {
+  background-color: transparent;
+  scroll-snap-align: none;
+  height: 100%;
+  padding: 1.5rem;
+  margin: 0;
+}
+.paddingcard::after {
+  visibility: hidden;
+}
+
+.card::after {
+  content: "";
+  height: 4.5rem;
+  width: 4.5rem;
+  position: absolute;
+  top: 5%;
+  left: -15%;
+  border-radius: 999px;
+}
+
+.card:nth-of-type(2)::after {
+  background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+}
+
+.card:nth-of-type(3)::after {
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.card:nth-of-type(4)::after {
+  background-image: linear-gradient(to top, #c79081 0%, #dfa579 100%);
+}
+
+.card:nth-of-type(5)::after {
+  background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+}
+
+.card:nth-of-type(6)::after {
+  background-image: linear-gradient(-20deg, #616161 0%, #9bc5c3 100%);
+}
+
+.card:nth-of-type(7)::after {
+  background-image: linear-gradient(to right, #fdd835 0%, #fee140 100%);
+}
+
+.card:nth-of-type(8)::after {
+  background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+}
+
+.card:nth-of-type(9)::after {
+  background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+
+.card > h3 {
+  font-size: 1.5rem;
+  text-align: left;
+}
+.card > p {
+}
+
+.card > * {
+  color: white;
+}
+
+.links {
+  display: flex;
+  font-weight: bold;
+  justify-content: space-between;
+}
+.links > a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  /* margin-left: 0.2rem;
+  margin-right: 0.2rem; */
+}
+.links > a > img {
+  padding: 0 0.2rem;
+}
+
+@media screen and (min-width: 900px) {
+  .main > h2 {
+    font-size: 3rem;
+    padding: 1rem;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto 1rem;
+    padding-top: 2.5rem;
+  }
+
+  .cards {
+    /* overflow: unset;
+    flex-wrap: wrap;
+    justify-content: space-around; */
+    overflow: visible;
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+  }
+  .card {
+    padding: 2rem 2rem;
+    max-width: 230px;
+    height: 250px;
+    margin: 1rem 0;
+  }
+
+  .card::after {
+    height: 3rem;
+    width: 3rem;
+    left: -12%;
+  }
+  .paddingcard {
+    display: none;
+  }
+}

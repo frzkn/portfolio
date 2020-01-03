@@ -1,8 +1,13 @@
 import React from "react"
 import Hero from "../components/Hero"
+import Project from "../components/Project"
+export default () => {
+  const [light, setLight] = React.useState(true)
+  return (
+    <div>
+      <Hero light={light} setLight={setLight} />
 
-export default () => (
-  <div >
-    <Hero />
-  </div>
-)
+      <Project light={light} />
+    </div>
+  )
+}
