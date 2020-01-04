@@ -8,7 +8,8 @@
   font-size: 2.8rem;
   text-align: center;
   padding: 0;
-  color: var(--dark-bg);
+  /* color: var(--dark-bg); */
+  color: #282828;
 }
 
 .lightText {
