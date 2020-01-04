@@ -1,11 +1,11 @@
 .main {
   background-color: var(--light-bg);
-  transition: 1s all;
+  transition: 1s background;
   padding-bottom: 6rem;
 }
 
 .main > h2 {
-  font-size: 3rem;
+  font-size: 2.8rem;
   text-align: center;
   padding: 0;
   color: var(--dark-bg);
@@ -135,7 +135,7 @@
 
 @media screen and (min-width: 900px) {
   .main > h2 {
-    font-size: 3rem;
+    font-size: 2.8rem;
     padding: 1rem;
     width: 80%;
     text-align: center;

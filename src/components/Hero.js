@@ -19,16 +19,16 @@ const Hero = ({ light, setLight }) => {
         <h2 class={cx({ name: true, lightText: !light })}>Faraz. K</h2>
         <h4 class={`${styles.title} accent`}>Web Developer</h4>
         <div class={cx({ links: true, invertLinks: !light })}>
-          <a href="https://t.me/frzkn">
+          <a href="https://t.me/frzkn" target="_blank">
             <img class={styles.brand} src={tele} />
           </a>
-          <a href="https://github.com/frzkn">
+          <a href="https://github.com/frzkn" target="_blank">
             <img class={styles.brand} src={git} />
           </a>
-          <a href="https://linkedin.com/in/frzkn">
+          <a href="https://linkedin.com/in/frzkn" target="_blank">
             <img class={styles.brand} src={linked} />
           </a>
-          <a href="https://instagram.com/frz.kn">
+          <a href="https://instagram.com/frz.kn" target="_blank">
             <img class={styles.brand} src={insta} />
           </a>
         </div>

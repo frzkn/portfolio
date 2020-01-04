@@ -3,7 +3,7 @@
   min-height: 800px;
   display: relative;
   background-color: var(--light-bg);
-  transition: 1s all;
+  transition: 1s background;
   overflow: hidden;
 }
 
@@ -42,7 +42,7 @@
   padding-right: 1rem;
 }
 .brand {
-  height: 2.5rem;
+  height: 2.2rem;
 }
 .name,
 .title,
@@ -54,22 +54,15 @@
 
 .resume {
   padding: 0.8rem 1rem;
-  border-radius: 3px;
-
-  background: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0.15) 0%,
-      rgba(0, 0, 0, 0.15) 100%
-    ),
-    #282828;
-  background-blend-mode: multiply, multiply;
+  border-radius: 5px;
+  background: #282828;
   color: white;
   font-family: inherit;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
   border: none;
   max-width: 250px;
-  border-bottom: 0.8rem solid black;
+  border-bottom: 0.5rem solid black;
 }
 
 .chevron {
@@ -185,6 +178,7 @@
   .links,
   .resume {
     transform: translateY(50%);
+    width: 200px;
     margin: 0.2rem;
   }
 
