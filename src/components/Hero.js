@@ -12,6 +12,7 @@ import scroll from "../images/scroll.svg"
 let cx = classNames.bind(styles)
 
 const Hero = ({ light, setLight }) => {
+  const [resumeBanner, toggleResumeBanner] = React.useState(false)
   const toggleMode = () => setLight(!light)
   return (
     <div class={cx({ main: true, darkBg: !light })}>
@@ -32,7 +33,12 @@ const Hero = ({ light, setLight }) => {
             <img class={styles.brand} src={insta} />
           </a>
         </div>
-        <button class={styles.resume}>RESUME</button>
+        <button
+          class={cx({ resume: true, showBanner: resumeBanner })}
+          onClick={() => toggleResumeBanner(!resumeBanner)}
+        >
+          RESUME
+        </button>
         <div class={styles.circle}></div>
         <div class={styles.circle2}></div>
         <div class={styles.arc}></div>
@@ -46,7 +52,7 @@ const Hero = ({ light, setLight }) => {
         <p class={cx({ woftwtag: true, lightText: !light })}>
           #homescreenoftheweek
         </p>
-      <div className={styles.rectangle}></div>
+        <div className={styles.rectangle}></div>
       </div>
       <img src={scroll} class={styles.chevron} />
     </div>

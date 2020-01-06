@@ -61,8 +61,32 @@
   font-size: 1rem;
   font-weight: bold;
   border: none;
+  outline: none;
   max-width: 250px;
+  position: relative;
   border-bottom: 0.5rem solid black;
+}
+
+.resume::before {
+  content: "Reach out to me farazrk001@gmail.com";
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  position: absolute;
+  left: 0%;
+  top: -8%;
+  opacity: 0;
+  height: 3.5rem;
+  width: 100%;
+  background-color: var(--accent);
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  color: white;
+  z-index: -2;
+}
+.resume.showBanner::before {
+  top: 110%;
+  opacity: 1;
 }
 
 .chevron {
