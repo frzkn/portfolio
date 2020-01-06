@@ -15,14 +15,14 @@ export default ({ light }) => {
           <h3>ÐChat</h3>
           <p>Decentralized solution to integrity first Chat on IPFS Network</p>
           <div className={styles.links}>
-            <a href="#">
+            <a href="https://github.com/frzkn/dchat-ipfs">
               <img src={code}></img>
               <p>Code</p>
             </a>
-            <a href="#">
+            <a href="https://dchat.netlify.com/">
               <img src={link}></img>
               <p>Link</p>
-            </a>
+            </a>{" "}
           </div>
         </div>
         <div className={styles.card}>
@@ -32,11 +32,11 @@ export default ({ light }) => {
             test.
           </p>
           <div className={styles.links}>
-            <a href="#">
+            <a href="https://github.com/frzkn/smashkeys">
               <img src={code}></img>
               <p>Code</p>
             </a>
-            <a href="#">
+            <a href="https://smashkeys.netlify.com">
               <img src={link}></img>
               <p>Link</p>
             </a>
@@ -49,11 +49,11 @@ export default ({ light }) => {
             kitchen.
           </p>
           <div className={styles.links}>
-            <a href="#">
+            <a className={styles.disabled} href="#">
               <img src={code}></img>
               <p>Code</p>
             </a>
-            <a href="#">
+            <a href="https://react-recipe-frontend.netlify.com/">
               <img src={link}></img>
               <p>Link</p>
             </a>
@@ -66,11 +66,11 @@ export default ({ light }) => {
             currently doing when asked WYD
           </p>
           <div className={styles.links}>
-            <a href="#">
+            <a href="#" className={styles.disabled}>
               <img src={code}></img>
               <p>Code</p>
             </a>
-            <a href="#">
+            <a className={styles.disabled} href="#" target="_blank">
               <img src={link}></img>
               <p>Link</p>
             </a>
@@ -82,11 +82,11 @@ export default ({ light }) => {
             Sending ebooks and documents to Kindle instantly and wirelessly.
           </p>
           <div className={styles.links}>
-            <a href="#">
+            <a href="https://github.com/frzkn/dropbooks" target="_blank">
               <img src={code}></img>
               <p>Code</p>
             </a>
-            <a href="#">
+            <a href="https://frzkn-dropbooks.herokuapp.com" target="_blank">
               <img src={link}></img>
               <p>Link</p>
             </a>
@@ -96,11 +96,11 @@ export default ({ light }) => {
           <h3>B@I Website</h3>
           <p>Frontend for a Blockchain based Indian Startup.</p>
           <div className={styles.links}>
-            <a href="#">
+            <a className={styles.disabled} href="#" >
               <img src={code}></img>
               <p>Code</p>
             </a>
-            <a href="#">
+            <a href="https://blockchainatindia.com" target="_blank">
               <img src={link}></img>
               <p>Link</p>
             </a>
@@ -110,11 +110,11 @@ export default ({ light }) => {
           <h3>Tic-Tac-Toe</h3>
           <p>Android X and 0 Game.</p>
           <div className={styles.links}>
-            <a href="#">
+            <a href="https://github.com/frzkn/android-tic-tac-toe" target="_blank">
               <img src={code}></img>
               <p>Code</p>
             </a>
-            <a href="#">
+            <a className={styles.disabled} href="#">
               <img src={link}></img>
               <p>Link</p>
             </a>
@@ -124,11 +124,11 @@ export default ({ light }) => {
           <h3>Weather App</h3>
           <p>Descriptive weather app for entered location</p>
           <div className={styles.links}>
-            <a href="#">
+            <a href="https://github.com/frzkn/node-weather-app" target="_blank">
               <img src={code}></img>
               <p>Code</p>
             </a>
-            <a href="#">
+            <a href="https://frzkn-node-weather.herokuapp.com" target="_blank">
               <img src={link}></img>
               <p>Link</p>
             </a>
@@ -136,7 +136,6 @@ export default ({ light }) => {
         </div>{" "}
         <div className={cx({ card: true, paddingcard: true })}></div>
       </div>
-
     </div>
   )
 }

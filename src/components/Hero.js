@@ -46,6 +46,7 @@ const Hero = ({ light, setLight }) => {
         <p class={cx({ woftwtag: true, lightText: !light })}>
           #homescreenoftheweek
         </p>
+      <div className={styles.rectangle}></div>
       </div>
       <img src={scroll} class={styles.chevron} />
     </div>
