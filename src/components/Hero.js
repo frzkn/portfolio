@@ -49,7 +49,7 @@ const Hero = ({ light, setLight, content, showContent, fade, setFade }) => {
         <div class={styles.circle2}></div>
         <div class={styles.arc}></div>
 
-        <p class={styles.fab} onClick={toggleMode}>
+        <p class={cx({ fab: true, fadeIn: fade })} onClick={toggleMode}>
           <img class={styles.fabImage} src={lightDark}></img>
         </p>
       </div>
