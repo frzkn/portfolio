@@ -48,7 +48,7 @@ const Hero = ({ light, setLight }) => {
         </p>
       </div>
       <div class={styles.woftw}>
-        <img src={woftw} />
+        <img src={woftw} loading="eager"/>
         <p class={cx({ woftwtag: true, lightText: !light })}>
           #homescreenoftheweek
         </p>

@@ -11,6 +11,7 @@ export default ({ light }) => {
       <h2 className={cx({ lightText: !light })}>Projects //</h2>
       <div className={styles.cards}>
         <div className={cx({ card: true, paddingcard: true })}></div>
+
         <div className={styles.card}>
           <h3>ÐChat</h3>
           <p>Decentralized solution to integrity first Chat on IPFS Network</p>
