@@ -67,7 +67,7 @@ const Hero = ({ light, setLight, content, showContent, fade, setFade }) => {
             setTimeout(() => {
               clearTimeout(a)
               clearTimeout(b)
-            }, 3000)
+            }, 10000)
           }}
         />
         <p class={cx({ woftwtag: true, lightText: !light })}>
