@@ -19,7 +19,9 @@ const Hero = ({ light, setLight, content, showContent, fade, setFade }) => {
     setFade(true)
   }
   return (
-    <div class={cx({ main: true, darkBg: !light, render: !content, fadeIn: fade  })}>
+    <div
+      class={cx({ main: true, darkBg: !light, render: !content, fadeIn: fade })}
+    >
       <div class={styles.hero}>
         <h2 class={cx({ name: true, lightText: !light })}>Faraz. K</h2>
         <h4 class={`${styles.title} accent`}>Web Developer</h4>
@@ -56,12 +58,16 @@ const Hero = ({ light, setLight, content, showContent, fade, setFade }) => {
           src={woftw}
           loading="eager"
           onLoad={() => {
-            setTimeout(() => {
+            let a = setTimeout(() => {
               showContent(true)
             }, 2000)
-            setTimeout(() => {
+            let b = setTimeout(() => {
               applyFade()
             }, 2200)
+            setTimeout(() => {
+              clearTimeout(a)
+              clearTimeout(b)
+            }, 3000)
           }}
         />
         <p class={cx({ woftwtag: true, lightText: !light })}>
