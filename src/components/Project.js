@@ -129,7 +129,7 @@ export default ({ light, content, fade }) => {
               <p>Code</p>
             </a>
             <a href="https://frzkn-node-weather.herokuapp.com" target="_blank">
-              <img src={link}></img>
+              <img src={link} ></img>
               <p>Link</p>
             </a>
           </div>

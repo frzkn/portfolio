@@ -20,62 +20,67 @@ const Hero = ({ light, setLight, content, showContent, fade, setFade }) => {
   }
   return (
     <div
-      class={cx({ main: true, darkBg: !light, render: !content, fadeIn: fade })}
+      className={cx({ main: true, darkBg: !light, render: !content, fadeIn: fade })}
     >
-      <div class={styles.hero}>
-        <h2 class={cx({ name: true, lightText: !light })}>Faraz. K</h2>
-        <h4 class={`${styles.title} accent`}>Web Developer</h4>
-        <div class={cx({ links: true, invertLinks: !light })}>
+      <div className={styles.hero}>
+        <h2 className={cx({ name: true, lightText: !light })}>Faraz. K</h2>
+        <h4 className={`${styles.title} accent`}>Web Developer</h4>
+        <div className={cx({ links: true, invertLinks: !light })}>
           <a href="https://t.me/frzkn" target="_blank">
-            <img class={styles.brand} src={tele} />
+            <img className={styles.brand} src={tele}  alt="tele"/>
           </a>
           <a href="https://github.com/frzkn" target="_blank">
-            <img class={styles.brand} src={git} />
+            <img className={styles.brand} src={git} alt="git"/>
           </a>
           <a href="https://linkedin.com/in/frzkn" target="_blank">
-            <img class={styles.brand} src={linked} />
+            <img className={styles.brand} src={linked} alt="linked"/>
           </a>
           <a href="https://instagram.com/frz.kn" target="_blank">
-            <img class={styles.brand} src={insta} />
+            <img className={styles.brand} src={insta} alt="insta"/>
           </a>
         </div>
         <button
-          class={cx({ resume: true, showBanner: resumeBanner })}
+          className={cx({ resume: true, showBanner: resumeBanner })}
           onClick={() => toggleResumeBanner(!resumeBanner)}
         >
           RESUME
         </button>
-        <div class={styles.circle}></div>
-        <div class={styles.circle2}></div>
-        <div class={styles.arc}></div>
+        <div className={styles.circle}></div>
+        <div className={styles.circle2}></div>
+        <div className={styles.arc}></div>
 
-        <p class={cx({ fab: true, fadeIn: fade })} onClick={toggleMode}>
-          <img class={styles.fabImage} src={lightDark}></img>
+        <p className={cx({ fab: true, fadeIn: fade })} onClick={toggleMode}>
+          <img className={styles.fabImage} src={lightDark} alt="fab"></img>
         </p>
       </div>
-      <div class={styles.woftw}>
+      <div className={styles.woftw}>
         <img
           src={woftw}
-          loading="eager"
+          alt="woftw"
           onLoad={() => {
-            let a = setTimeout(() => {
-              showContent(true)
-            }, 2000)
-            let b = setTimeout(() => {
-              applyFade()
-            }, 2200)
-            setTimeout(() => {
-              clearTimeout(a)
-              clearTimeout(b)
-            }, 10000)
+            showContent(true)
+            applyFade()
+            // await new Promise(done =>
+            //   setTimeout(() => {
+            //     showContent(true)
+            //     done()
+            //   }, 2000)
+            // )
+
+            // await new Promise(done =>
+            //   setTimeout(() => {
+            //     applyFade()
+            //     done()
+            //   }, 500)
+            // )
           }}
         />
-        <p class={cx({ woftwtag: true, lightText: !light })}>
+        <p className={cx({ woftwtag: true, lightText: !light })}>
           #homescreenoftheweek
         </p>
         <div className={styles.rectangle}></div>
       </div>
-      <img src={scroll} class={styles.chevron} />
+      <img src={scroll} className={styles.chevron} />
     </div>
   )
 }

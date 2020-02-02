@@ -3,9 +3,9 @@ import styles from "./SplashScreen.module.css"
 
 export default function SplashScreen() {
   return (
-    <div class={styles.splash}>
-      <div class={styles.doublebounce1}></div>
-      <div class={styles.doublebounce2}></div>
+    <div className={styles.splash}>
+      <div className={styles.doublebounce1}></div>
+      <div className={styles.doublebounce2}></div>
     </div>
   )
 }
