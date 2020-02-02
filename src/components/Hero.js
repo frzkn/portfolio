@@ -11,11 +11,15 @@ import scroll from "../images/scroll.svg"
 
 let cx = classNames.bind(styles)
 
-const Hero = ({ light, setLight }) => {
+const Hero = ({ light, setLight, content, showContent, fade, setFade }) => {
   const [resumeBanner, toggleResumeBanner] = React.useState(false)
   const toggleMode = () => setLight(!light)
+
+  const applyFade = () => {
+    setFade(true)
+  }
   return (
-    <div class={cx({ main: true, darkBg: !light })}>
+    <div class={cx({ main: true, darkBg: !light, render: !content, fadeIn: fade  })}>
       <div class={styles.hero}>
         <h2 class={cx({ name: true, lightText: !light })}>Faraz. K</h2>
         <h4 class={`${styles.title} accent`}>Web Developer</h4>
@@ -48,7 +52,18 @@ const Hero = ({ light, setLight }) => {
         </p>
       </div>
       <div class={styles.woftw}>
-        <img src={woftw} loading="eager"/>
+        <img
+          src={woftw}
+          loading="eager"
+          onLoad={() => {
+            setTimeout(() => {
+              showContent(true)
+            }, 2000)
+            setTimeout(() => {
+              applyFade()
+            }, 2200)
+          }}
+        />
         <p class={cx({ woftwtag: true, lightText: !light })}>
           #homescreenoftheweek
         </p>

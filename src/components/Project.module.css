@@ -1,7 +1,8 @@
 .main {
   background-color: var(--light-bg);
-  transition: 1s background;
+  transition: 1s background, 1s opacity;
   padding-bottom: 6rem;
+  opacity: 0;
 }
 
 .main > h2 {
@@ -132,6 +133,10 @@
 }
 .links > a > img {
   padding: 0 0.2rem;
+}
+
+.fadeIn {
+  opacity: 1;
 }
 
 .disabled,

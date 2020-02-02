@@ -4,14 +4,13 @@ import code from "../images/code.svg"
 import link from "../images/link.svg"
 import classNames from "classnames/bind"
 
-export default ({ light }) => {
+export default ({ light, content, fade }) => {
   let cx = classNames.bind(styles)
   return (
-    <div className={cx({ main: true, darkBg: !light })}>
+    <div className={cx({ main: true, darkBg: !light, render: !content, fadeIn: fade})}>
       <h2 className={cx({ lightText: !light })}>Projects //</h2>
       <div className={styles.cards}>
         <div className={cx({ card: true, paddingcard: true })}></div>
-
         <div className={styles.card}>
           <h3>ÐChat</h3>
           <p>Decentralized solution to integrity first Chat on IPFS Network</p>

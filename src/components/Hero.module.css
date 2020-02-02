@@ -3,8 +3,13 @@
   min-height: 800px;
   display: relative;
   background-color: var(--light-bg);
-  transition: 1s background;
+  transition: background 1s, opacity 0.8s;
   overflow: hidden;
+  opacity: 0;
+}
+
+.fadeIn {
+  opacity: 1;
 }
 
 .woftw {
