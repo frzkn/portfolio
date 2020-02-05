@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useEffect} from "react"
 import styles from "./Hero.module.css"
 import classNames from "classnames/bind"
 import woftw from "../banners/week3.png"
@@ -15,28 +15,46 @@ const Hero = ({ light, setLight, content, showContent, fade, setFade }) => {
   const [resumeBanner, toggleResumeBanner] = React.useState(false)
   const toggleMode = () => setLight(!light)
 
-  const applyFade = () => {
-    setFade(true)
+  const applyFade = async () => {
+    await new Promise(done =>
+      setTimeout(() => {
+        setFade(true)
+        done()
+      }, 500)
+    )
   }
+  let imageElement = React.useRef(null)
+  useEffect(() => {
+    if(imageElement.complete) {
+            showContent(true)
+            applyFade()
+    }
+
+  }, )
   return (
     <div
-      className={cx({ main: true, darkBg: !light, render: !content, fadeIn: fade })}
+      className={cx({
+        main: true,
+        darkBg: !light,
+        render: !content,
+        fadeIn: fade,
+      })}
     >
       <div className={styles.hero}>
         <h2 className={cx({ name: true, lightText: !light })}>Faraz. K</h2>
         <h4 className={`${styles.title} accent`}>Web Developer</h4>
         <div className={cx({ links: true, invertLinks: !light })}>
           <a href="https://t.me/frzkn" target="_blank">
-            <img className={styles.brand} src={tele}  alt="tele"/>
+            <img className={styles.brand} src={tele} alt="tele" />
           </a>
           <a href="https://github.com/frzkn" target="_blank">
-            <img className={styles.brand} src={git} alt="git"/>
+            <img className={styles.brand} src={git} alt="git" />
           </a>
           <a href="https://linkedin.com/in/frzkn" target="_blank">
-            <img className={styles.brand} src={linked} alt="linked"/>
+            <img className={styles.brand} src={linked} alt="linked" />
           </a>
           <a href="https://instagram.com/frz.kn" target="_blank">
-            <img className={styles.brand} src={insta} alt="insta"/>
+            <img className={styles.brand} src={insta} alt="insta" />
           </a>
         </div>
         <button
@@ -57,6 +75,7 @@ const Hero = ({ light, setLight, content, showContent, fade, setFade }) => {
         <img
           src={woftw}
           alt="woftw"
+          ref={e => (imageElement = e)}
           onLoad={() => {
             showContent(true)
             applyFade()

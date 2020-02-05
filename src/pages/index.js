@@ -5,10 +5,13 @@ import SplashScreen from "../components/SplashScreen"
 import Hero from "../components/Hero"
 import Project from "../components/Project"
 
+
 export default () => {
   const [light, setLight] = React.useState(true)
   const [content, showContent] = React.useState(false)
   const [fade, setFade] = React.useState(false)
+  
+
 
   return (
     <div>
